@@ -2,19 +2,9 @@ import { useState } from "react";
 import TodoList from "./components/TodoList";
 import DoneList from "./components/DoneList";
 import AddTodo from "./components/AddTodo";
-
+import type { Todo } from "./types";  // ✅ use shared type
 
 export default function App() {
-
-
-  interface Todo {
-  id: number;
-  text: string;
-  done: boolean;
-}
-
-
-
   const [todos, setTodos] = useState<Todo[]>([]);
   const [doneTodos, setDoneTodos] = useState<Todo[]>([]);
 
